@@ -1,0 +1,20 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Map Drawing</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-fab right bottom>
+        <button ion-fab *ngIf="!free_hand && polygon == null" (click)="toggleFreeHand()">
+            <ion-icon name="hand"></ion-icon>
+        </button>
+        <button ion-fab *ngIf="polygon != null" (click)="removePolyline()" color="danger">
+            <ion-icon name="close"></ion-icon>
+        </button>
+    </ion-fab>
+    <div id="map"></div>
+</ion-content>
